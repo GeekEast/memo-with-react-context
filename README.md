@@ -95,6 +95,9 @@ const C0 = (props) => {
     - `C3`的`props`中**无**children，使用memo**能阻止**渲染;
     - `C2`的`props`中**有**children，memo**无法**阻止渲染;
     - `C1`的`props`中**有**children, memo**无法**阻止渲染;
+- 解决方案:
+  - 自定义比较方法，忽略对children的比较
+  - 作为props的函数，在传入前要进行useCallback, 要注意添加适当的deps
 
 ### Patterns
 <div style="text-align:center; margin:auto">
