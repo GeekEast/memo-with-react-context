@@ -102,18 +102,33 @@ const C0 = (props) => {
 </div>
 
 #### Container Pattern
-- 垂直结构设计
-- 灰层数据传入需要通过C
+- `Container`和`Contained`之间存在**数据传递**
+- `灰层数据`传入需要通过`Container`
+- `Container`和`Contained`**强**`耦合`
 <div style="text-align:center; margin:auto weight:100px height: 50px">
 <img width="200" height="300" src="img/2020-02-27-16-10-47.png"></div>
 
 #### High Order Component Pattern
+- `High Order Component`和`Low Order Component`之间存在**数据传递**
+- `灰层数据`传入需要通过`High Order Component`
+- `High Order Component`和`Low Order Component`**低**`耦合`
+- 能够优雅地`多层嵌套`
 <div style="text-align:center; margin:auto"><img width="200" height="300" src="img/2020-02-27-16-11-03.png"></div>
 
 #### Render Props Pattern
+- `Provider`和`Render Component`之间存在**数据传递**
+- `灰层数据`传入**无需**经过`Provider`层中继
+- `Provider`和`Render Component`**低**`耦合`
+- 多层嵌套可以说是**非常丑陋**
+- `可读性`很强，能够一眼看出`组件间的关系`
 <div style="text-align:center; margin:auto"><img width="450" height="400" src="img/2020-02-27-16-11-19.png"></div>
 
 #### Composite Component Pattern
+- `Parent`和`Children`之间不存在**数据传递**
+- `灰层数据`传入**无需**经过`Provider`层中继
+- `Parent`和`Children`**弱**`耦合`
+- 可以优雅地`多层嵌套`，就像`HTML`一样
+- **可读性强**
 <div style="text-align:center; margin:auto"><img width="450" height="400" src="img/2020-02-27-16-11-35.png"></div>
 
 
