@@ -102,7 +102,7 @@ const C0 = (props) => {
 #### Container Pattern
 - 垂直结构设计
 - 灰层数据传入需要通过C
-<div style="text-align:center; margin:auto"><img src="img/2020-02-27-16-10-47.png"></div>
+<div style="text-align:center; margin:auto weight:auto height:auto max-width: 50% max-height:50%"><img src="img/2020-02-27-16-10-47.png"></div>
 
 #### High Order Component Pattern
 <div style="text-align:center; margin:auto"><img src="img/2020-02-27-16-11-03.png"></div>
