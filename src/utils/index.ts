@@ -14,12 +14,23 @@ const deepObject = (obj) => {
   return false
 }
 
-export const smartStrictEqual = (prev, next) => {
-  const prevType = getType(prev);
-  const nextType = getType(next);
-  if (prevType !== nextType) return Object.is(prev, next);
-  if (prevType === 'Array') return deepEqual(prev, next);
-  if (prevType !== 'Object') return Object.is(prev, next)
-  if (deepObject(prev) || deepObject(next)) return deepEqual(prev, next)
-  return equal(prev, next)
+export const smartStrictEqual = (options = { type: 'container' }) => (prev, next) => {
+  const { type } = options;
+  let prevProps = prev;
+  let nextProps = next;
+
+  if (type === 'composite') {
+    const { children: _1, ..._prev } = prev;
+    const { children: _2, ..._next } = next;
+    prevProps = _prev;
+    nextProps = _next;
+  }
+
+  const prevType = getType(prevProps);
+  const nextType = getType(nextProps);
+  if (prevType !== nextType) return Object.is(prevProps, nextProps);
+  if (prevType === 'Array') return deepEqual(prevProps, nextProps);
+  if (prevType !== 'Object') return Object.is(prevProps, nextProps)
+  if (deepObject(prevProps) || deepObject(nextProps)) return deepEqual(prevProps, nextProps)
+  return equal(prevProps, nextProps)
 }

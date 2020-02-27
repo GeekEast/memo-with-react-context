@@ -11,4 +11,4 @@ const Level4Component = ({ context }) => {
   )
 }
 
-export default memo(Level4Component, smartStrictEqual);
+export default memo(Level4Component, smartStrictEqual());
