@@ -97,21 +97,24 @@ const C0 = (props) => {
     - `C1`的`props`中**有**children, memo**无法**阻止渲染;
 
 ### Patterns
-<div style="text-align:center; margin:auto"><img src="img/2020-02-27-16-11-46.png"></div>
+<div style="text-align:center; margin:auto">
+<img width="200" height="200" src="img/2020-02-27-16-11-46.png">
+</div>
 
 #### Container Pattern
 - 垂直结构设计
 - 灰层数据传入需要通过C
-<div style="text-align:center; margin:auto weight:auto height:auto max-width: 50% max-height:50%"><img src="img/2020-02-27-16-10-47.png"></div>
+<div style="text-align:center; margin:auto weight:100px height: 50px">
+<img width="200" height="300" src="img/2020-02-27-16-10-47.png"></div>
 
 #### High Order Component Pattern
-<div style="text-align:center; margin:auto"><img src="img/2020-02-27-16-11-03.png"></div>
+<div style="text-align:center; margin:auto"><img width="200" height="300" src="img/2020-02-27-16-11-03.png"></div>
 
 #### Render Props Pattern
-<div style="text-align:center; margin:auto"><img src="img/2020-02-27-16-11-19.png"></div>
+<div style="text-align:center; margin:auto"><img width="450" height="400" src="img/2020-02-27-16-11-19.png"></div>
 
 #### Composite Component Pattern
-<div style="text-align:center; margin:auto"><img src="img/2020-02-27-16-11-35.png"></div>
+<div style="text-align:center; margin:auto"><img width="450" height="400" src="img/2020-02-27-16-11-35.png"></div>
 
 
 
